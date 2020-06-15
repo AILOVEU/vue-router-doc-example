@@ -1,32 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/user/jike">/user/jike</router-link>
+      <br />
+      <router-link to="/user/sara">/user/sara</router-link>
+      <br />
+      <router-link to="/user/jike/about">/user/jike/about</router-link>
+      <br />
+      <router-link to="/user/jike/home">/user/jike/home</router-link>
+      <br />
+      <router-link to="/user/sara/about">/user/sara/about</router-link>
+      <br />
+      <router-link to="/user/sara/home">/user/sara/home</router-link>
+      <br />
     </div>
-    <router-view />
+    <p>----------</p>
+    <!-- 这里显示的是直接的path -->
+    <router-view></router-view>
   </div>
 </template>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+a {
+  display: inline-block;
+  line-height: 30px;
 }
 </style>
