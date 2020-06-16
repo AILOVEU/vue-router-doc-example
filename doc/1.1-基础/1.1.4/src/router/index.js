@@ -1,24 +1,29 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import About from "../views/About.vue"
+import About from "../views/About.vue";
 import User from "../views/User.vue";
+
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/home',
+    path: "/",
+    name: "home",
     component: Home
-  },{
-    path: '/about',
-    component: About
   },
   {
-    path: '/user/:id',
-    name: 'user',
-    component: User
-  }
+    path: "/about",
+    name: "about",
+    component:About
+  },
+  {
+    path: "/user/:id",
+    name: "user",
+    component:User 
+
+  },
 ];
 
 const router = new VueRouter({
