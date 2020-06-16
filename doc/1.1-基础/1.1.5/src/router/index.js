@@ -1,22 +1,33 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Body from "../views/body";
-import Footer from "../views/footer";
-import Top from "../views/top";
+import UserEmailsSubscriptions from "../views/UserEmailsSubscriptions";
+import UserProfile from "../views/UserProfile";
+import UserProfilePreview from "../views/UserProfilePreview";
+import UserSettings from "../views/UserSettings";
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
+  mode: 'history',
   routes: [
     {
-      path: '/',
-      components: {
-        default: Body,
-        a: Top,
-        b: Footer
-      }
+      path: '/settings',
+      // You could also have named views at tho top
+      component: UserSettings,
+      children: [{
+        path: 'emails',
+        component: UserEmailsSubscriptions
+      }, {
+        path: 'profile',
+        components: {
+          default: UserProfile,
+          helper: UserProfilePreview
+        }
+      }]
     }
   ]
 })
+
+router.push('/settings/emails')
 
 export default router;
