@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import UserEmailsSubscriptions from "../views/UserEmailsSubscriptions";
-import UserProfile from "../views/UserProfile";
-import UserProfilePreview from "../views/UserProfilePreview";
-import UserSettings from "../views/UserSettings";
+import C from "../views/C";
+import A from "../views/A";
+import B from "../views/B";
+import Settings from "../views/Settings";
 
 Vue.use(VueRouter);
 
@@ -11,23 +11,28 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
+      //第一级路径
       path: '/settings',
-      // You could also have named views at tho top
-      component: UserSettings,
+      component: Settings,
       children: [{
+        //第二级路径：/settings/emails
         path: 'emails',
-        component: UserEmailsSubscriptions
+        //无命名视图
+        component: C
       }, {
+        //第二级路径：/settings/profile
         path: 'profile',
         components: {
-          default: UserProfile,
-          helper: UserProfilePreview
+          // 默认显示A
+          default: A,
+          // 命名视图helper为B
+          helper: B
         }
       }]
     }
   ]
 })
 
-router.push('/settings/emails')
+// router.push('/settings/emails')
 
 export default router;

@@ -1,42 +1,19 @@
 <template>
-<div id="app">
-  <h1>Nested Named Views</h1>
-  <router-view></router-view>
-</div>
+  <div id="app">
+    <h1>Nested Named Views</h1>
+    <router-link to="/settings">setting</router-link>
+    <br />
+    <!-- App.vue为/视图 -->
+    <router-link to="/">/</router-link>
+    <!-- 这个位置显示router-line跳转的路由内容 -->
+    <p>----------</p>
+    <router-view></router-view>
+  </div>
 </template>
 
-<script>
-export default {
-
+<style scoped>
+a {
+  display: inline-block;
+  line-height: 30px;
 }
-</script>
-
-<style>
-.us {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header header"
-    "nav content"
-    "nav helper"
-    ;
-}
-
-h2 {
-  grid-area: header;
-}
-
-.us__nav {
-  grid-area: nav;
-  border: 1px dotted;
-  margin-right: .75rem;
-  padding: .3rem;
-}
-.us__content {
-  grid-area: content;
-}
-.us__content--helper {
-  grid-area: helper;
-}
-</style>
+</style>>

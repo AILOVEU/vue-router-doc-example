@@ -1,5 +1,5 @@
 <template>
 <div>
-	<h3>Edit your profile</h3>
+	<h3>B</h3>
 </div>
 </template>

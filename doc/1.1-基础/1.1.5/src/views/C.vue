@@ -1,5 +1,5 @@
 <template>
 <div>
-	<h3>Preview of your profile</h3>
+	<h3>C</h3>
 </div>
 </template>

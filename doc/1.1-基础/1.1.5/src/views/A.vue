@@ -1,5 +1,5 @@
 <template>
 <div>
-	<h3>Email Subscriptions</h3>
+	<h3>A</h3>
 </div>
 </template>
