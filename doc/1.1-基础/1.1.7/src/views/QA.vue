@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-    <h1>Helper: {{id}}</h1>
+    <h1>QA:{{id}}</h1>
   </div>
-
 </template>
 <script>
 export default {

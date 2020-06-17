@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import User from "../views/User.vue";
-// import Helper from "../views/Helper.vue";
+import Helper from "../views/Helper.vue";
+import QA from "../views/QA.vue";
 
 Vue.use(VueRouter);
 
@@ -12,25 +13,28 @@ const routes = [
     name: "Home",
     component: Home,
     props: true
-  },{
+  }, {
     path: "/user/:id",
     name: "User",
-    component: {
-      default: User,
-      // helper: Helper
-    },
-    // 对于包含命名视图的路由，你必须分别为每个命名视图添加 `props` 选项
-    props: {
-      default: true,
-      // helper: false
-    }
+    component: User,
+    //?如果 props 是一个对象，它会被按原样设置为组件属性。当 props 是静态的时候有用
+    props:  true
   },
   {
-    path: "/user",
-    name: "User",
-    component: User
+    path: "/helper/:id",
+    name: "Helper",
+    components: {
+      default: Helper,
+      qa: QA
+    },
+    props: {
+      // props 被设置为 true，route.params == props
+      default: true,
+      //将它改为true，则会变成QA：123
+      qa: false
+    }
   },
-  
+
 ];
 
 const router = new VueRouter({
