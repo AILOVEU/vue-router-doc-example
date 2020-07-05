@@ -18,7 +18,7 @@ vue  --version
 ### 学习路线
 - [vue](https://github.com/AILOVEU/vue-doc-example)
 - [vue-cli](https://github.com/AILOVEU/vue-cli-doc-example)（计划中）
-- [vue-router](https://github.com/AILOVEU/vue-router-doc-example)（暂时未公开）
+- [vue-router](https://github.com/AILOVEU/vue-router-doc-example)
 - [vuex](https://github.com/AILOVEU/vuex-doc-example) （暂时未公开）
 - [vue-ssr](https://github.com/AILOVEU/vue-ssr-doc-example)（计划中）
 
