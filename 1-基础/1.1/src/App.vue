@@ -8,8 +8,6 @@
       <!-- 同一个路径可以匹配多个路由，此时，匹配的优先级就按照路由的定义顺序：谁先定义的，谁的优先级就最高。 -->
       <router-link to="/foo">Go to Foo</router-link>
       <br />
-      <router-link to="/bar?user=1">Go to Bar</router-link>
-      <br />
       <router-link to="/post/2020/zh/jikewang">Go to post</router-link>
       <br />
       <router-link to="/user/jiekwang">Go to user</router-link>
