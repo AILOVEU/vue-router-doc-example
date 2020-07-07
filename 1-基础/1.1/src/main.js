@@ -4,7 +4,6 @@ import VueRouter from "vue-router";
 import App from "./App.vue";
 // 引入路由模板
 import Foo from "./views/foo";
-import Bar from "./views/bar";
 import Post from "./views/post";
 import User from "./views/user";
 import Watch from "./views/watch";
@@ -22,8 +21,7 @@ Vue.use(VueRouter);
 
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
-const router =
-  // 4.实例化一个vue对象
+// 4.实例化一个vue对象
   new Vue({
     router: new VueRouter({
       routes: [

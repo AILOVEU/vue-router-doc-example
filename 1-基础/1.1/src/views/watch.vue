@@ -1,4 +1,5 @@
 <template>
+  <!-- 查询参数 -->
   <h1>当前route：{{$route.query}}</h1>
 </template>
 <script>
